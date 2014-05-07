@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="10;">
+    <title>動画一覧 | マンガテレビ</title>
+    <!--
+    <script src="js/lib/jquery-1.9.1.min.js"></script>
+    -->
+    <link rel=stylesheet href="../css/movies/index.css">
+  </head>
+  <body>
+    <h1>本日の動画一覧</h1>
+    <div class="items">
+    <%
+      for ( var i = movieData.length; i > 0; i--) {
+        var movie = movieData[i-1];
+    %>
+      <div class="item">
+        <a href="./<%= movie.id %>">
+          <img src="<%= contextPath + movie.path %>" class="movie">
+        </a>
+        <% if (movie.actor.twitterId) { %>
+          <a href="https://twitter.com/<%= movie.actor.twitterId %>">@<%= movie.actor.twitterId %></a>
+        <% } else { %>
+          <%= movie.actor.name %>
+        <% } %>
+      </div>
+    <%
+      }
+    %>
+    </div>
+  </body>
+</html>

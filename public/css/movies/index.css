@@ -1,0 +1,31 @@
+body {
+  text-align: center;
+  padding: 2em;
+}
+h1 {
+  font-size: 3em;
+}
+.items {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.item {
+  float: left;
+  width: 23%;
+  margin-left: 2%;
+  margin-bottom: 2em;
+}
+.item:nth-child(4n+1) {
+  margin-left: 0;
+}
+.movie {
+  width: 100%;
+  border: 1px solid #ccc;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
